@@ -10,8 +10,12 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
         int port = 4444;
         String host = null;
-        if (args.length>1) {
-            host = args[1];
+        if (args.length>0) {
+            host = args[0];
+            System.out.println("Connecting to: "+host);
+        }else {
+            System.out.println("No ip given -> setting up a server at port: "+port);
+
         }
 
         if (host==null){
